@@ -25,7 +25,7 @@ ordered_word_count = words.groupby(words.word).count().orderBy(col("count").desc
 print(ordered_word_count.count())
 ordered_word_count.show(100)
 # Use the Cloud Storage bucket for temporary BigQuery export data used by the connector.
-bucket = "temp_de2024_708179"  # use your bucket 
+bucket = " de_jads_temp_708179"  # use your bucket 
 spark.conf.set('temporaryGcsBucket', bucket)
 # Setup hadoop fs configuration for schema gs://
 conf = spark.sparkContext._jsc.hadoopConfiguration()
